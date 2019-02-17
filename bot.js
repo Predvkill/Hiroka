@@ -57,6 +57,36 @@ client.on('message', message => {
 });
 
 
+client.on("ready", async  => {
+client.setInterval(async function(){
+client.channels.get("546680636123906059").setName(`W`);
+client.channels.get("546680636123906059").setName(`WE`);
+client.channels.get("546680636123906059").setName(`WEL`);
+client.channels.get("546680636123906059").setName(`WELC`);
+client.channels.get("546680636123906059").setName(`WELCO`);
+client.channels.get("546680636123906059").setName(`WELCOM`);
+client.channels.get("546680636123906059").setName(`WELCOME`);
+client.channels.get("546680636123906059").setName(`T`);
+client.channels.get("546680636123906059").setName(`TO`);
+client.channels.get("546680636123906059").setName(`D`);
+client.channels.get("546680636123906059").setName(`DA`);
+client.channels.get("546680636123906059").setName(`DAM`);
+client.channels.get("546680636123906059").setName(`DAMN`);
+client.channels.get("546680636123906059").setName(`DAMNA`);
+client.channels.get("546680636123906059").setName(`DAMNAT`);
+client.channels.get("546680636123906059").setName(`DAMNATI`);
+client.channels.get("546680636123906059").setName(`DAPMNTIO`);
+client.channels.get("546680636123906059").setName(`DAMNATION`);
+client.channels.get("546680636123906059").setName(`DAMNATION™`);
+client.channels.get("546680636123906059").setName(`T`);
+client.channels.get("546680636123906059").setName(`HE`);
+client.channels.get("546680636123906059").setName(`TDN™`);
+client.channels.get("546680636123906059").setName(`THE DAMNATION™`);
+	
+
+  }, 20000);
+});
+
 client.on('message', message => {
   var prefix ="/";
 if(message.content.startsWith(prefix +"server")){
