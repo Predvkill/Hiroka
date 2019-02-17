@@ -28,7 +28,7 @@ client.on('message', message => {
   if (message.author.bot) return;
    if (message.content === prefix + "help") {
    if(message.author.id !== "480540559233122324") return message.reply('**:x: SORRY MATE THIS COMMANDS ONLY FOR BOT OWNER :x:**');
-   message.channel.send('**:beginner: [❖══ ● C.L.U SYSTEM BOT ● ══❖] :beginner: **');
+   message.channel.send('**:beginner: [❖══ ● JARVIS SYSTEM BOT ● ══❖] :beginner: **');
    const embed = new Discord.RichEmbed()
   .setAuthor(message.author.username,message.author.avatarURL)
   .setColor('RANDOM')
@@ -41,7 +41,7 @@ client.on('message', message => {
   client.on('ready', function(){
   client.user.setStatus("dnd");
     var ms = 10000 ;
-    var setActivity = ['★ TG | System ★','The Grid™ | Server ' ];
+    var setActivity = ['★ TDN | System ★','The DamNation™ | Server ' ];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -103,7 +103,7 @@ client.on('message', message => {
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
-            .setTitle('``C.L.U STATS`` ')
+            .setTitle('``JARVIS STATS`` ')
             .addField('``Uptime``', [timeCon(process.uptime())], true)
             .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
@@ -224,23 +224,23 @@ client.on('message', message => {
  client.on('message', message => {
 if(message.content.startsWith(prefix +'news')) {
 if(!message.channel.guild) return message.channel.send('**This Command Only For Servers **').then(m => m.delete(5000));
-      const A8tra7Room = message.guild.channels.find(x => x.name === "bot-status-logs")
+      const A8tra7Room = message.guild.channels.find(x => x.name === "announcements✍")
       if(!message.channel.guild) return message.reply(`This Command Only For Servers :x:`);
    let a8tra7 = message.content.split(' ').slice(1).join(' ')
    var m8tr7 = message.author.id
-if(!message.guild.channels.find(x => x.name === "bot-status-logs")) return message.channel.send('i cant find `bot-status-logs` room!')
+if(!message.guild.channels.find(x => x.name === "announcements✍")) return message.channel.send('i cant find `announcements✍` room!')
    var ThxForSug = new Discord.RichEmbed()
       .setColor('WHITE')
    .setTitle(`:white_check_mark: Success!`)
    .setTimestamp()
-   .setDescription(`Thanks for your bot-status-logs ! :sparkles: `)
-.setDescription(`**bot-status-logs** : ${a8tra7}`)
+   .setDescription(`Thanks For Your Announcements✍ ! :sparkles: `)
+.setDescription(`**Announcements✍** : ${a8tra7}`)
    var Sure = new Discord.RichEmbed()
    .setTimestamp()
       .setColor('WHITE')
    .setTitle(`Are you sure you send the proposal? You have a minute before canceling.`)               
 .setDescription(`bot-status-logs : **${a8tra7}**`)
-		 .setFooter('TG bot-status-logs' , client.user.avatarURL)
+		 .setFooter('TDN - Announcements✍' , client.user.avatarURL)
 message.channel.sendEmbed(Sure).then(msg => {
     msg.react('❎')
 .then(() => msg.react('✅'))
@@ -256,8 +256,8 @@ Yes.on("collect", r => {
    .setTimestamp()
    .setColor('GOLD')
    .setThumbnail(message.author.avatarURL)
-   .setTitle(`New bot-status-logs :bell:`)
-   .setDescription(`From : __<@${m8tr7}>__\n\nbot-status-logs: **${a8tra7}**`)
+   .setTitle(`Announcements :bell:`)
+   .setDescription(`From : __<@${m8tr7}>__\n\nAnnouncements: **${a8tra7}**`)
    .setFooter(`${message.author.username}#${message.author.discriminator}`)
    A8tra7Room.send(ala8tra7)
    message.channel.sendEmbed(ThxForSug).then(message => {message.delete(6000)})
@@ -265,7 +265,7 @@ msg.delete();
 
 })
 No.on("collect", r => {
-message.channel.send('bot-status-logs canceled :white_check_mark: ').then(message => {message.delete(6000)})
+message.channel.send('Announcements✍ canceled :white_check_mark:').then(message => {message.delete(6000)})
 msg.delete();
 })
 })
@@ -274,28 +274,10 @@ msg.delete();
   
 
 client.on('message', message => {
-    if (message.channel.id == "541631206735872000") {
+    if (message.channel.id == "529659667421462548") {
         message.react("👍");
         message.react("👎");
-        console.log("suggestion is Ready !");
-
-    }
-});
-
-client.on('message', message => {
-    if (message.channel.id == "542901835980210189") {
-        message.react("👍");
-        message.react("👎");
-        console.log("suggestion is Ready !");
-
-    }
-});
-
-client.on('message', message => {
-    if (message.channel.id == "542901900413239296") {
-        message.react("👍");
-        message.react("👎");
-        console.log("suggestion is Ready !");
+        console.log("Questions For Stuff is Ready ☑");
 
     }
 });
@@ -360,10 +342,10 @@ client.on('message', message => {
   client.on("message", message => {
     let args = message.content.split(" ").slice(1);
   if (message.content.startsWith('/report')) {
-      message.author.send(`**🔰• Thank You For Making Grid The Best Place, (We Will Check Your Report As Soon Possible) •🔰**`)
+      message.author.send(`**🔰• Thank You For Making TDN™ The Best Place, (We Will Check Your Report As Soon Possible) •🔰**`)
         let user = message.mentions.users.first();
         let reason = args.slice(1).join(' ');
-        let modlog = client.channels.find(x => x.name === 'reports');
+        let modlog = client.channels.find(x => x.name === 'report⚠');
         if (!reason) return message.reply('**:x: You Must Montion The Member To Be Reported and The Reason :x:**');
         if (message.mentions.users.size < 1) return message.reply('**You must Montion The Member To Be Reported**').catch(console.error);
          
@@ -379,31 +361,6 @@ client.on('message', message => {
       message.delete()
       return client.channels.get(modlog.id).sendEmbed(embed).catch(console.error);
       
-  }
-  });
-
-//FeedBack
-client.on("message", message => {
-    let args = message.content.split(" ").slice(1);
-  if (message.content.startsWith('/feedback')) {
-      message.author.send(`**🔰• Thank You For Making Grid The Best Place, (We Will Check Your Feedback As Soon Possible) •🔰**`)
-
-        let user = message.mentions.users.first();
-        let reason = args.slice(1).join(' ');
-        let modlog = client.channels.find(x => x.name === 'feedback');
-        if (!reason) return message.reply('**:x: You Must Montion Yourself and Type Your Message To feedback :x:**');
-        if (message.mentions.users.size < 1) return message.reply('**:x: You Must Montion Yourself To feedback :x:**').catch(console.error);
-   
-    if (!modlog) return message.reply('**:x: feedback Room is Not Available :x:**');
-    const embed = new Discord.RichEmbed()
-      .setColor(0x8600AE)
-      .setTimestamp()
-      .addField('🔰• Message Type :', '❤ Feedback ❤')
-      .addField('🔰• Author name :', `${message.author.username}#${message.author.discriminator}`)
-      .addField('🔰• Feedback Message :', reason);
-      message.delete()
-      return client.channels.get(modlog.id).sendEmbed(embed).catch(console.error);
-
   }
   });
 
@@ -442,7 +399,7 @@ client.on('message', message=> {
     if (message.author.bot) return;
     if (message.isMentioned(client.user))
     {
-    message.reply(" **How can I help you With ?** ");
+    message.reply(" **How Can I Help You With ?** ");
     }
 });
 
@@ -456,7 +413,7 @@ client.on('guildMemberAdd', member => {
       .setThumbnail(memberavatar)
       .addField('• 🔰|Name » ',`${member}`)
       .addField('• 🌹|Welcome User » ' , `💎・。・゜★・。・。☆・゜・。・゜。・。・゜★・💎 
-Welcome ${member} To The Grid™ - Official  Server , Please be sure to take a look at the rules in #read-me  additional details can be found in #announcements . Our Support team is here and happy to help you if you have any questions regarding Grid, Enjoy your stay.
+Welcome ${member} To **The DamNation™ - Official  Server** , Please be sure to take a look at the rules in **#server-rules☑**  additional details can be found in **#announcements✍** . Our Support team is here and happy to help you if you have any questions regarding **TheDamNation™**, Enjoy Your stay.
 💎・。・゜★・。・。☆・゜・。・゜。・。・゜★・💎`)
       .addField('• 🆔| User ID » ', "**[" + `${member.id}` + "]**" )
               .addField('➡| You Are Number » ', "**[" + `${member.guild.memberCount}` + "]**")                     
@@ -464,7 +421,7 @@ Welcome ${member} To The Grid™ - Official  Server , Please be sure to take a l
   .addField('• 🕣|Time Create » ', member.user.createdAt.toLocaleString(), true)
 
                                      
-   .setFooter("|•♥•| The Grid™ |•♥•|")
+   .setFooter("|•♥•| The DamNation™ |•♥•|")
       .setTimestamp()
  
     channel.sendEmbed(embed);
@@ -474,7 +431,7 @@ Welcome ${member} To The Grid™ - Official  Server , Please be sure to take a l
 
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
-  return channel.send(`**💎 Welcome ${member} To 🔰• ${member.guild.name} Server •🔰 - Please Read Our Rules Before Do Something Else And Respect The Other Members Within The Community ! . Enjoy ♥ [ And You Are Number : "${member.guild.memberCount}" ] 💎**`)
+  return channel.send(`**💎 Welcome ${member} To 🔰• ${member.guild.name} Server •🔰 - Please Read Our **#server-rules☑** Before Do Something Else And Respect The Other Members Within The Community ! . Enjoy ♥ [ And You Are Number : "${member.guild.memberCount}" ] 💎**`)
 }).catch(console.error)
 })
 
@@ -902,13 +859,13 @@ if (command == "say") {
         if(message.author.id !== "480540559233122324") return message.reply('**❎ | You aren\'t The Bot Owner !**');
         message.channel.send('**Restarting.**').then(msg => {
             setTimeout(() => {
-               msg.edit('**:arrows_counterclockwise: C.L.U Restarting..**');
+               msg.edit('**:arrows_counterclockwise: Jarvis Restarting..**');
             },1000);
             setTimeout(() => {
-               msg.edit('**:arrows_counterclockwise: C.L.U Restarting...**');
+               msg.edit('**:arrows_counterclockwise: Jarvis Restarting...**');
             },2000);
         });
-        console.log(`${message.author.tag} [ ${message.author.id} ] C.L.U Has Restarted Successfully.`);
+        console.log(`${message.author.tag} [ ${message.author.id} ] Jarvis Has Restarted Successfully.`);
         console.log(`Restarting..`);
         setTimeout(() => {
             client.destroy();
@@ -1001,96 +958,19 @@ client.on('message', message => {
 });
 
 
-client.on('message', message => {
-  if (message.author.bot) return;
-   if (message.content === prefix + "invite-clu") {
-   if(!message.channel.guild) return message.reply(':no_entry: | This Command For Servers Only!'); 
-   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(':no_entry: | You dont have **MANAGE_MESSAGES** Permission!');
-
-   message.channel.send('** :beginner:  [❖══ ● C.L.U SYSYTEM BOT ● ══❖] :beginner:  **');
-   const embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username,message.author.avatarURL)
-  .setColor('RANDOM')
-  .setTitle(`**:beginner: :link: Click Here To Invite C.L.U System Bot :link: :beginner:**`)
-  .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=541454401152483328&permissions=8&scope=bot`) 
-     message.channel.sendEmbed(embed);
-	   
-       }
-   });
-
     client.on('voiceStateUpdate', (old, now) => {
-    const channel = client.channels.get('542094021699436551');
+    const channel = client.channels.get('530640160166117386');
     const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
     const size = channel.name.match(/\[\s(\d+)\s\]/);
     if (!size) return channel.setName(`Voice Online : [${currentSize}]`);
     if (currentSize !== size) channel.setName(`Voice Online : [${currentSize}]`);
 });
 
-client.on('message', message => {
-  if (message.author.bot) return;
-   if (message.content === prefix + "invite-quorra") {
-    
-   message.channel.send('**:one: : :rainbow: [❖══ ● QUORRA RIANBOW BOT ● ══❖] :rainbow: **');
-   const embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username,message.author.avatarURL)
-  .setColor('RANDOM')
-  .setTitle(`**:arrow_right: :link: Click Here To Invite Quorra RainBow Bot :link: :arrow_left:**`)
-  .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=541430895328886785&permissions=8&scope=bot`)
-     message.channel.sendEmbed(embed);
 
-       }
-   });
-
-client.on('message', message => {
-  if (message.author.bot) return;
-   if (message.content === prefix + "invite-rinzler") {
-    
-   message.channel.send('**:two: : :headphones: [❖══ ● RINZLER MUSIC BOT ● ══❖] :headphones: **');
-   const embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username,message.author.avatarURL)
-  .setColor('RANDOM')
-  .setTitle(`**:arrow_right: :link: Click Here To Invite Rinzler Music Bot :link: :arrow_left:**`)
-  .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=541446177384693760&permissions=8&scope=bot`) 
-     message.channel.sendEmbed(embed);
-	   
-       }
-   });
-
-client.on('message', message => {
-  if (message.author.bot) return;
-   if (message.content === prefix + "invite") {
-    
-   message.channel.send('**:white_check_mark: ● Done , تــــم ارســالك في الخــاص ● :e_mail:**');
-   const embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username,message.author.avatarURL)
-  .setColor('RANDOM')
-  .setDescription(`**
-:fire: [❖══ ● THE GRID™ BOT COMMANDS LIST FOR INVITE ● ══❖] :fire:   
-  
-❖═════════════════════════════════════❖  
-
-● :one: - :rainbow: : ${prefix}invite-quorra :arrow_right: To Invite Quorra RainBow Bot ●
-
-● :two: - :headphones: : ${prefix}invite-rinzler :arrow_right: To Invite Rinzler Music Bot ●
-
-● :books: : سيرفر دعم :arrow_right: https://discord.gg/PzbDJwx ●
-
-❖═════════════════════════════════════❖  
-
-:hearts: [❖═════ ● المزيد قريبا ان شاء الله! ● ═══════❖] :hearts: 
-
-:zap: ─════ {✯ ● Bot Made By ŦĐŇ™漫Ranger√ ⚡#4474 ● ✯} ════─ :zap:
-
-● The Grid™ - Official :copyright: **`);
-
-message.author.sendEmbed(embed)
-
-  }
-});
 
 client.on('message', async message => {
   if(message.content.startsWith(prefix + "wr")) {
-  if(message.author.id !== "480540559233122324") return message.reply('** :x: You Aren\'t The Bot Owner ! :x:**');
+  if(message.author.id !== "529659996129198089") return message.reply('** :x: You Aren\'t The Bot Owner ! :x:**');
   await  message.channel.send(`** :x: Now Write Something To Send :x:**`)
     let filter = m => m.author.id === message.author.id
       var text = '';
