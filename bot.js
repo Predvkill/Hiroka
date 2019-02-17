@@ -41,7 +41,7 @@ client.on('message', message => {
   client.on('ready', function(){
   client.user.setStatus("dnd");
     var ms = 10000 ;
-    var setActivity = ['★ TDN | System ★','The DamNation™ | Server ' ];
+    var setActivity = ['★ TDN™ | System ★','★ TDN™ | Server ★' ];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -79,7 +79,7 @@ client.channels.get("546680636123906059").setName(`DAPMNTIO`);
 client.channels.get("546680636123906059").setName(`DAMNATION`);
 client.channels.get("546680636123906059").setName(`DAMNATION™`);
 client.channels.get("546680636123906059").setName(`T`);
-client.channels.get("546680636123906059").setName(`HE`);
+client.channels.get("546680636123906059").setName(`TD`);
 client.channels.get("546680636123906059").setName(`TDN™`);
 client.channels.get("546680636123906059").setName(`THE DAMNATION™`);
 	
