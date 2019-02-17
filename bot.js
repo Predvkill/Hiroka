@@ -66,8 +66,8 @@ client.channels.get("546680636123906059").setName(`WELC`);
 client.channels.get("546680636123906059").setName(`WELCO`);
 client.channels.get("546680636123906059").setName(`WELCOM`);
 client.channels.get("546680636123906059").setName(`WELCOME`);
-client.channels.get("546680636123906059").setName(`T`);
-client.channels.get("546680636123906059").setName(`TO`);
+client.channels.get("546680636123906059").setName(`WELCOME T`);
+client.channels.get("546680636123906059").setName(`WELCOME TO`);
 client.channels.get("546680636123906059").setName(`D`);
 client.channels.get("546680636123906059").setName(`DA`);
 client.channels.get("546680636123906059").setName(`DAM`);
@@ -80,6 +80,7 @@ client.channels.get("546680636123906059").setName(`DAMNATION`);
 client.channels.get("546680636123906059").setName(`DAMNATION™`);
 client.channels.get("546680636123906059").setName(`T`);
 client.channels.get("546680636123906059").setName(`TD`);
+client.channels.get("546680636123906059").setName(`TDN`);
 client.channels.get("546680636123906059").setName(`TDN™`);
 client.channels.get("546680636123906059").setName(`THE DAMNATION™`);
 	
