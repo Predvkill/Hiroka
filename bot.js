@@ -81,12 +81,19 @@ client.channels.get("546680636123906059").setName(`THE DAMNATI`);
 client.channels.get("546680636123906059").setName(`THE DAMNATIO`);
 client.channels.get("546680636123906059").setName(`THE DAMNATION`);
 client.channels.get("546680636123906059").setName(`THE DAMNATION™`);
-client.channels.get("546680636123906059").setName(`★`);
-client.channels.get("546680636123906059").setName(`★ T`);
-client.channels.get("546680636123906059").setName(`★ TD`);
-client.channels.get("546680636123906059").setName(`★ TDN`);
-client.channels.get("546680636123906059").setName(`★ TDN™`);
-client.channels.get("546680636123906059").setName(`★ TDN™ ★`);
+client.channels.get("546680636123906059").setName(`THE DAMNATION`);
+client.channels.get("546680636123906059").setName(`THE DAMNATIO`);
+client.channels.get("546680636123906059").setName(`THE DAMNATIO`);
+client.channels.get("546680636123906059").setName(`THE DAMNATI`);
+client.channels.get("546680636123906059").setName(`THE DAMNAT`);
+client.channels.get("546680636123906059").setName(`THE DAMNA`);
+client.channels.get("546680636123906059").setName(`THE DAMN`);
+client.channels.get("546680636123906059").setName(`THE DAM`);
+client.channels.get("546680636123906059").setName(`THE DA`);
+client.channels.get("546680636123906059").setName(`THE D`);
+client.channels.get("546680636123906059").setName(`THE`);
+client.channels.get("546680636123906059").setName(`TH`);
+client.channels.get("546680636123906059").setName(`T`);
 client.channels.get("546680636123906059").setName(`THE DAMNATION™`);
 	
 
@@ -96,7 +103,7 @@ client.channels.get("546680636123906059").setName(`THE DAMNATION™`);
 client.on('message', message => {
   var prefix ="/";
 if(message.content.startsWith(prefix +"server")){
-if(!message.channel.guild) return message.reply('** :x: This command Only For Servers :x:**');
+if(!message.channel.guild) return message.reply('** :x: This Command Only For Servers :x:**');
 if(!message.channel.guild) return message.reply(' ');
 const millis = new Date().getTime() - message.guild.createdAt.getTime();
 const now = new Date();
@@ -378,7 +385,7 @@ client.on('message', message => {
   client.on("message", message => {
     let args = message.content.split(" ").slice(1);
   if (message.content.startsWith('/report')) {
-      message.author.send(`**🔰• Thank You For Making TDN™ The Best Place, (We Will Check Your Report As Soon Possible) •🔰**`)
+      message.author.send(`**🔰• Thank You For Making TDN™ The Best Place ♥ , (We Will Check Your Report As Soon Possible) •🔰**`)
         let user = message.mentions.users.first();
         let reason = args.slice(1).join(' ');
         let modlog = client.channels.find(x => x.name === 'report⚠');
@@ -447,14 +454,14 @@ client.on('guildMemberAdd', member => {
   let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setThumbnail(memberavatar)
-      .addField('• 🔰|Name » ',`${member}`)
-      .addField('• 🌹|Welcome User » ' , `💎・。・゜★・。・。☆・゜・。・゜。・。・゜★・💎 
-Welcome ${member} To **The DamNation™ - Official  Server** , Please be sure to take a look at the rules in **#server-rules☑**  additional details can be found in **#announcements✍** . Our Support team is here and happy to help you if you have any questions regarding **TheDamNation™**, Enjoy Your stay.
+      .addField('• 🔰| Name » ',`${member}`)
+      .addField('• 🌹| Welcome User » ' , `💎・。・゜★・。・。☆・゜・。・゜。・。・゜★・💎 
+Welcome ${member} To **The DamNation™ - Official  Server** , Please Be Sure To Take A Look At The Rules In **#server-rules☑**  Additional Details Can Be Found In **#announcements✍** . Our Support Team Is Here And Happy To Help You If You Have Any Questions Regarding **TheDamNation™**, Enjoy Your Stay ♥.
 💎・。・゜★・。・。☆・゜・。・゜。・。・゜★・💎`)
       .addField('• 🆔| User ID » ', "**[" + `${member.id}` + "]**" )
               .addField('➡| You Are Number » ', "**[" + `${member.guild.memberCount}` + "]**")                     
-                                   .addField('• 🔮|Server Name » ', `${member.guild.name}`,true)
-  .addField('• 🕣|Time Create » ', member.user.createdAt.toLocaleString(), true)
+                                   .addField('• 🔮| Server Name » ', `${member.guild.name}`,true)
+  .addField('• 🕣| Time Create » ', member.user.createdAt.toLocaleString(), true)
 
                                      
    .setFooter("|•♥•| The DamNation™ |•♥•|")
@@ -467,7 +474,7 @@ Welcome ${member} To **The DamNation™ - Official  Server** , Please be sure to
 
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
-  return channel.send(`**💎 Welcome ${member} To 🔰• ${member.guild.name} Server •🔰 - Please Read Our **#server-rules☑** Before Do Something Else And Respect The Other Members Within The Community ! . Enjoy ♥ [ And You Are Number : "${member.guild.memberCount}" ] 💎**`)
+  return channel.send(`**💎 Welcome ${member} To 🔰 • ${member.guild.name} Server • 🔰 - Please Read Our **#server-rules☑** Before Do Something Else And Respect The Other Members Within The Community ! . Enjoy ♥ [ And You Are Number : "${member.guild.memberCount}" ] 💎**`)
 }).catch(console.error)
 })
 
