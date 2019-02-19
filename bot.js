@@ -94,9 +94,11 @@ client.channels.get("546680636123906059").setName(`THE D`);
 client.channels.get("546680636123906059").setName(`THE`);
 client.channels.get("546680636123906059").setName(`TH`);
 client.channels.get("546680636123906059").setName(`T`);
+client.channels.get("546680636123906059").setName(`THE`);
+client.channels.get("546680636123906059").setName(`THE DAMN`);
+client.channels.get("546680636123906059").setName(`THE DAMNATION`);
 client.channels.get("546680636123906059").setName(`THE DAMNATION™`);
 	
-
   }, 20000);
 });
 
@@ -320,6 +322,8 @@ client.on('message', message => {
     if (message.channel.id == "529659667421462548") {
         message.react("👍");
         message.react("👎");
+        message.channel.send(` **✅ | Done | - We Will Read Your Questions And Reply You Back As Soon Possible ! ** `).then(messages => messages.delete(5000));
+      
         console.log("Questions For Stuff is Ready ☑");
 
     }
@@ -385,7 +389,7 @@ client.on('message', message => {
   client.on("message", message => {
     let args = message.content.split(" ").slice(1);
   if (message.content.startsWith('/report')) {
-      message.author.send(`**🔰• Thank You For Making TDN™ The Best Place ♥ , (We Will Check Your Report As Soon Possible) •🔰**`)
+      message.author.send(`**🔰 • Thank You For Making TheDamNation™ The Best Place ♥ , (We Will Check Your Report As Soon Possible) • 🔰**`)
         let user = message.mentions.users.first();
         let reason = args.slice(1).join(' ');
         let modlog = client.channels.find(x => x.name === 'report⚠');
@@ -474,7 +478,7 @@ Welcome ${member} To **The DamNation™ - Official  Server** , Please Be Sure To
 
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
-  return channel.send(`**💎 Welcome ${member} To 🔰 • ${member.guild.name} Server • 🔰 - Please Read Our **#server-rules☑** Before Do Something Else And Respect The Other Members Within The Community ! . Enjoy ♥ [ And You Are Number : "${member.guild.memberCount}" ] 💎**`)
+  return channel.send(`**💎 Welcome ${member} To 🔰 • ${member.guild.name} Server • 🔰 - Please Read Our ``#server-rules☑`` Before Do Something Else And Respect The Other Members Within The Community ! . Enjoy ♥ [ And You Are Number : "${member.guild.memberCount}" ] 💎**`)
 }).catch(console.error)
 })
 
@@ -519,13 +523,13 @@ client.on('message', msg => {
 client.on('message', message => {
     let args = message.content.split(" ").slice(1);
 if (message.content.startsWith(prefix + 'clear')) {
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' **__•# No Permissions__**');
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**:x: ``No Permissions`` :x:**');
  let args = message.content.split(" ").slice(1)
     let messagecount = parseInt(args);
-    if (args > 100) return message.reply("**•# Must Be Under >>100**").then(messages => messages.delete(5000))
-    if (!messagecount) return message.reply("**•# Pick How Long You Want To Delete**").then(messages => messages.delete(5000))
+    if (args > 100) return message.reply("**:x: ``Must Be Under >> 100`` :x:**").then(messages => messages.delete(5000))
+    if (!messagecount) return message.reply("**:x: ``Pick How Long You Want To Delete`` :x:**").then(messages => messages.delete(5000))
     message.channel.fetchMessages({limit: messagecount + 1}).then(messages => message.channel.bulkDelete(messages));
-    message.channel.send(`\`${args}\` : __•# Done __ `).then(messages => messages.delete(5000));
+    message.channel.send(`\`${args}\` **✅ - Done** `).then(messages => messages.delete(5000));
   }
   });
      
@@ -858,7 +862,7 @@ if(!message.channel.guild) return message.reply(':no_entry: | This Command For S
 
 
  client.on('ready', () => {
- 	console.log('I am Ready !'); 
+ 	console.log('I am Ready To Fight !'); 
    });
 
 
@@ -901,7 +905,7 @@ if (command == "say") {
         console.log(`Restarting..`);
         setTimeout(() => {
             client.destroy();
-            client.login('process.env.BOT_TOKEN');
+            client.login(process.env.BOT_TOKEN);
         },3000);
     }
 });
