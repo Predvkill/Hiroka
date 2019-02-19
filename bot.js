@@ -105,7 +105,7 @@ client.channels.get("546680636123906059").setName(`THE DAMNATION™`);
 client.on('message', message => {
   var prefix ="/";
 if(message.content.startsWith(prefix +"server")){
-if(!message.channel.guild) return message.reply('** :x: This Command Only For Servers :x:**');
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('⚠ | **•# No Permissions**');
 if(!message.channel.guild) return message.reply(' ');
 const millis = new Date().getTime() - message.guild.createdAt.getTime();
 const now = new Date();
@@ -142,7 +142,7 @@ function timeCon(time) {
 var version = '1.9';
 client.on('message', message => {
     if (message.content.startsWith(prefix + "stats")) {
-    if(!message.channel.guild) return message.reply('**:x: This Command Only For Servers :x:**');
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('⚠ | **•# No Permissions**');
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
@@ -268,7 +268,7 @@ client.on('message', message => {
 
  client.on('message', message => {
 if(message.content.startsWith(prefix +'news')) {
-if(!message.channel.guild) return message.channel.send('**This Command Only For Servers **').then(m => m.delete(5000));
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('⚠ | **•# No Permissions**').then(m => m.delete(5000));
       const A8tra7Room = message.guild.channels.find(x => x.name === "announcements✍")
       if(!message.channel.guild) return message.reply(`This Command Only For Servers :x:`);
    let a8tra7 = message.content.split(' ').slice(1).join(' ')
