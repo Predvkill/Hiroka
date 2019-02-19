@@ -321,9 +321,7 @@ msg.delete();
 client.on('message', message => {
     if (message.channel.id == "529659667421462548") {
         message.react("👍");
-        message.react("👎");
-        message.channel.send(` **✅ | Done | - We Will Read Your Questions And Reply You Back As Soon Possible ! ** `).then(messages => messages.delete(5000));
-      
+        message.react("👎");      
         console.log("Questions For Stuff is Ready ☑");
 
     }
