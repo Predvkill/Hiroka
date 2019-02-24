@@ -1,3 +1,4 @@
+// ==================================================================
 const Discord = require('discord.js');
 const fs = require('fs');
 const ms = require('ms');
@@ -24,6 +25,14 @@ const prefix = '/'
 ti={}  
 spee={};
 
+  console.log(`Logged in as ${client.user.tag}!`);
+  console.log(`servers! [ " ${client.guilds.size} " ]`);
+  console.log(`Users! [ " ${client.users.size} " ]`);
+  console.log(`channels! [ " ${client.channels.size} " ]`);
+});
+
+// ==================================================================
+
 client.on('message', message => {
   if (message.author.bot) return;
    if (message.content === prefix + "help") {
@@ -38,24 +47,27 @@ client.on('message', message => {
        }
    });
 
-  client.on('ready', function(){
-  client.user.setStatus("dnd");
-    var ms = 10000 ;
-    var setActivity = ['★ TDN™ | System ★','★ TDN™ | Server ★' ];
+// ==================================================================
+
+client.on('ready', function(){//npm i ms 
+    var ms = 5000 ;
+    var setGame = [`★ TDN™ | System ★`,`Users! [ " ${client.users.size} " ]`,`servers! [ " ${client.guilds.size} " ]`];
     var i = -1;
     var j = 0;
     setInterval(function (){
         if( i == -1 ){
             j = 1;
         }
-        if( i == (setActivity.length)-1 ){
+        if( i == (setGame.length)-1 ){
             j = -1;
         }
         i = i+j;
-        client.user.setGame(setActivity[i],`https://www.twitch.tv/TheRealPredvkill`);
+        client.user.setGame(setGame[i],`https://www.twitch.tv/TheRealPredvkill`);
     }, ms);
+
 });
 
+// ==================================================================
 
 client.on('message', message => {
   var prefix ="/";
@@ -426,12 +438,14 @@ Welcome ${member} To **The DamNation™ - Official  Server** , Please Be Sure To
     channel.sendEmbed(embed);
 });
 
+
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
-  return channel.send(`**💎 Welcome ${member} To 🔰 • ${member.guild.name} Server • 🔰 - Please Read Our [#server-rules☑] Before Do Something Else And Respect The Other Members Within The Community ! . Enjoy ♥ [ And You Are Number : "${member.guild.memberCount}" ] 💎**`)
-
-  }).catch(console.error)
-	
+  return channel.send(`** :hearts: Welcome to the server :hearts:
+  :grinning:  member name --> __${member}__ :grinning: 
+  :bust_in_silhouette:  You are a member number --> __${member.guild.memberCount}__ :bust_in_silhouette:
+  :airplane: __${moment().format('HH:mm:ss A')}__ <-- Date of entry of the server ** :airplane: `)
+}).catch(console.error)
 })
 
 
