@@ -45,7 +45,7 @@ client.on('message', message => {
 
 client.on('ready', function(){//npm i ms 
     var ms = 10000 ;
-    var setGame = [`★ TDN™ | SYSTEM-BOT ★`,`★ TDN USERS : [${client.users.size}] ★`,`★ THE DAMNATION™ ★`];
+    var setGame = [`★ TDN™ | SYSTEM-BOT ★`,`★ TDN USERS :★`,`★ THE DAMNATION™ ★`];
     var i = -1;
     var j = 0;
     setInterval(function (){
