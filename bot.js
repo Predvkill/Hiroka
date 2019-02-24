@@ -44,8 +44,8 @@ client.on('message', message => {
 // ==================================================================
 
 client.on('ready', function(){//npm i ms 
-    var ms = 5000 ;
-    var setGame = [`★ TDN™ | System ★`,`Users! [ " ${client.users.size} " ]`,`servers! [ " ${client.guilds.size} " ]`];
+    var ms = 10000 ;
+    var setGame = [`★ TDN™ | SYSTEM-BOT ★`,`★ TDN USERS : [${client.users.size}] ★`,`★ THE DAMNATION™ ★`];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -435,10 +435,7 @@ Welcome ${member} To **The DamNation™ - Official  Server** , Please Be Sure To
 
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
-  return channel.send(`** :hearts: Welcome to the server :hearts:
-  :grinning:  member name --> __${member}__ :grinning: 
-  :bust_in_silhouette:  You are a member number --> __${member.guild.memberCount}__ :bust_in_silhouette:
-  :airplane: __${moment().format('HH:mm:ss A')}__ <-- Date of entry of the server ** :airplane: `)
+  return channel.send(`** 💎 Welcome ${member} To 🔰 • ${member.guild.name} Server • 🔰 - Please Read Our [Rules] Before Do Something Else And Respect The Other Members Within The Community ! , Enjoy ♥ [ And You Are Number : "${member.guild.memberCount}" ] 💎**` `)
 }).catch(console.error)
 })
 
