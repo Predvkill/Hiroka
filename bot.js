@@ -57,16 +57,6 @@ client.on('message', message => {
 });
 
 
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  var embed = new Discord.RichEmbed()
-  return channel.sendEmbed(embed)(`**💎 Welcome ${member} To 🔰 • ${member.guild.name} Server • 🔰 - Please Read Our [#server-rules☑] Before Do Something Else And Respect The Other Members Within The Community ! . Enjoy ♥ [ And You Are Number : "${member.guild.memberCount}" ] 💎**`)
-
-  }).catch(console.error)
-	
-})
-
-
 client.on('message', message => {
   var prefix ="/";
 if(message.content.startsWith(prefix +"server")){
@@ -435,6 +425,14 @@ Welcome ${member} To **The DamNation™ - Official  Server** , Please Be Sure To
  
     channel.sendEmbed(embed);
 });
+
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(`**💎 Welcome ${member} To 🔰 • ${member.guild.name} Server • 🔰 - Please Read Our [#server-rules☑] Before Do Something Else And Respect The Other Members Within The Community ! . Enjoy ♥ [ And You Are Number : "${member.guild.memberCount}" ] 💎**`)
+
+  }).catch(console.error)
+	
+})
 
 
 client.on('message', msg => {
