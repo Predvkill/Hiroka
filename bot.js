@@ -1,3 +1,4 @@
+// THIS BOT [JARVIS] CREATED BY THE RARER RARE RANGER - 2018 - 2019©
 // ==================================================================
 const Discord = require('discord.js');
 const fs = require('fs');
@@ -45,7 +46,7 @@ client.on('message', message => {
 
 client.on('ready', function(){//npm i ms 
     var ms = 10000 ;
-    var setGame = [`★ TDN™ | SYSTEM-BOT ★`,`★ TDN USERS :★`,`★ THE DAMNATION™ ★`];
+    var setGame = [`★ TDN™ | SYSTEM-BOT ★`,`★ TDN USERS : [${client.users.size}] ★`,`★ THE DAMNATION™ ★`];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -435,7 +436,7 @@ Welcome ${member} To **The DamNation™ - Official  Server** , Please Be Sure To
 
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
-  return channel.send(`** 💎 Welcome ${member} To 🔰 • ${member.guild.name} Server • 🔰 - Please Read Our [Rules] Before Do Something Else And Respect The Other Members Within The Community ! , Enjoy ♥ [ And You Are Number : "${member.guild.memberCount}" ] 💎**` `)
+  return channel.send(`** 💎 Welcome ${member} To 🔰 • ${member.guild.name} Server • 🔰 - Please Read Our [Rules] Before Do Something Else And Respect The Other Members Within The Community ! , Enjoy ♥ [ And You Are Number : "${member.guild.memberCount}" ] 💎**`)
 }).catch(console.error)
 })
 
