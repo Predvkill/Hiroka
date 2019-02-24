@@ -25,12 +25,6 @@ const prefix = '/'
 ti={}  
 spee={};
 
-  console.log(`Logged in as ${client.user.tag}!`);
-  console.log(`servers! [ " ${client.guilds.size} " ]`);
-  console.log(`Users! [ " ${client.users.size} " ]`);
-  console.log(`channels! [ " ${client.channels.size} " ]`);
-});
-
 // ==================================================================
 
 client.on('message', message => {
