@@ -57,6 +57,13 @@ client.on('message', message => {
 });
 
 
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(`**💎 Welcome ${member} To 🔰 • ${member.guild.name} Server • 🔰 - Please Read Our [#server-rules☑] Before Do Something Else And Respect The Other Members Within The Community ! . Enjoy ♥ [ And You Are Number : "${member.guild.memberCount}" ] 💎**`)
+}).catch(console.error)
+})
+
+
 client.on("ready", async  => {
 client.setInterval(async function(){
 client.channels.get("546680636123906059").setName(`W`);
@@ -382,7 +389,6 @@ client.on('message', message => {
  });
 
 
-
 //report
   client.on("message", message => {
     let args = message.content.split(" ").slice(1);
@@ -471,14 +477,6 @@ Welcome ${member} To **The DamNation™ - Official  Server** , Please Be Sure To
  
     channel.sendEmbed(embed);
 });
-
-
-
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(`**💎 Welcome ${member} To 🔰 • ${member.guild.name} Server • 🔰 - Please Read Our [#server-rules☑] Before Do Something Else And Respect The Other Members Within The Community ! . Enjoy ♥ [ And You Are Number : "${member.guild.memberCount}" ] 💎**`)
-}).catch(console.error)
-})
 
 
 client.on('message', msg => {
