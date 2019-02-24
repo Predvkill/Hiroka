@@ -64,51 +64,6 @@ client.on("guildMemberAdd", member => {
 })
 
 
-client.on("ready", async  => {
-client.setInterval(async function(){
-client.channels.get("546680636123906059").setName(`W`);
-client.channels.get("546680636123906059").setName(`WE`);
-client.channels.get("546680636123906059").setName(`WEL`);
-client.channels.get("546680636123906059").setName(`WELC`);
-client.channels.get("546680636123906059").setName(`WELCO`);
-client.channels.get("546680636123906059").setName(`WELCOM`);
-client.channels.get("546680636123906059").setName(`WELCOME`);
-client.channels.get("546680636123906059").setName(`WELCOME T`);
-client.channels.get("546680636123906059").setName(`WELCOME TO`);
-client.channels.get("546680636123906059").setName(`T`);
-client.channels.get("546680636123906059").setName(`TH`);
-client.channels.get("546680636123906059").setName(`THE`);
-client.channels.get("546680636123906059").setName(`THE D`);
-client.channels.get("546680636123906059").setName(`THE DA`);
-client.channels.get("546680636123906059").setName(`THE DAM`);
-client.channels.get("546680636123906059").setName(`THE DAMN`);
-client.channels.get("546680636123906059").setName(`THE DAMNA`);
-client.channels.get("546680636123906059").setName(`THE DAMNAT`);
-client.channels.get("546680636123906059").setName(`THE DAMNATI`);
-client.channels.get("546680636123906059").setName(`THE DAMNATIO`);
-client.channels.get("546680636123906059").setName(`THE DAMNATION`);
-client.channels.get("546680636123906059").setName(`THE DAMNATION™`);
-client.channels.get("546680636123906059").setName(`THE DAMNATION`);
-client.channels.get("546680636123906059").setName(`THE DAMNATIO`);
-client.channels.get("546680636123906059").setName(`THE DAMNATIO`);
-client.channels.get("546680636123906059").setName(`THE DAMNATI`);
-client.channels.get("546680636123906059").setName(`THE DAMNAT`);
-client.channels.get("546680636123906059").setName(`THE DAMNA`);
-client.channels.get("546680636123906059").setName(`THE DAMN`);
-client.channels.get("546680636123906059").setName(`THE DAM`);
-client.channels.get("546680636123906059").setName(`THE DA`);
-client.channels.get("546680636123906059").setName(`THE D`);
-client.channels.get("546680636123906059").setName(`THE`);
-client.channels.get("546680636123906059").setName(`TH`);
-client.channels.get("546680636123906059").setName(`T`);
-client.channels.get("546680636123906059").setName(`THE`);
-client.channels.get("546680636123906059").setName(`THE DAMN`);
-client.channels.get("546680636123906059").setName(`THE DAMNATION`);
-client.channels.get("546680636123906059").setName(`THE DAMNATION™`);
-	
-  }, 20000);
-});
-
 client.on('message', message => {
   var prefix ="/";
 if(message.content.startsWith(prefix +"server")){
@@ -1031,5 +986,52 @@ client.on('ready', () => {
     client.user.setStatus("dnd");
  
  });
+
+
+client.on("ready", async  => {
+client.setInterval(async function(){
+client.channels.get("546680636123906059").setName(`W`);
+client.channels.get("546680636123906059").setName(`WE`);
+client.channels.get("546680636123906059").setName(`WEL`);
+client.channels.get("546680636123906059").setName(`WELC`);
+client.channels.get("546680636123906059").setName(`WELCO`);
+client.channels.get("546680636123906059").setName(`WELCOM`);
+client.channels.get("546680636123906059").setName(`WELCOME`);
+client.channels.get("546680636123906059").setName(`WELCOME T`);
+client.channels.get("546680636123906059").setName(`WELCOME TO`);
+client.channels.get("546680636123906059").setName(`T`);
+client.channels.get("546680636123906059").setName(`TH`);
+client.channels.get("546680636123906059").setName(`THE`);
+client.channels.get("546680636123906059").setName(`THE D`);
+client.channels.get("546680636123906059").setName(`THE DA`);
+client.channels.get("546680636123906059").setName(`THE DAM`);
+client.channels.get("546680636123906059").setName(`THE DAMN`);
+client.channels.get("546680636123906059").setName(`THE DAMNA`);
+client.channels.get("546680636123906059").setName(`THE DAMNAT`);
+client.channels.get("546680636123906059").setName(`THE DAMNATI`);
+client.channels.get("546680636123906059").setName(`THE DAMNATIO`);
+client.channels.get("546680636123906059").setName(`THE DAMNATION`);
+client.channels.get("546680636123906059").setName(`THE DAMNATION™`);
+client.channels.get("546680636123906059").setName(`THE DAMNATION`);
+client.channels.get("546680636123906059").setName(`THE DAMNATIO`);
+client.channels.get("546680636123906059").setName(`THE DAMNATIO`);
+client.channels.get("546680636123906059").setName(`THE DAMNATI`);
+client.channels.get("546680636123906059").setName(`THE DAMNAT`);
+client.channels.get("546680636123906059").setName(`THE DAMNA`);
+client.channels.get("546680636123906059").setName(`THE DAMN`);
+client.channels.get("546680636123906059").setName(`THE DAM`);
+client.channels.get("546680636123906059").setName(`THE DA`);
+client.channels.get("546680636123906059").setName(`THE D`);
+client.channels.get("546680636123906059").setName(`THE`);
+client.channels.get("546680636123906059").setName(`TH`);
+client.channels.get("546680636123906059").setName(`T`);
+client.channels.get("546680636123906059").setName(`THE`);
+client.channels.get("546680636123906059").setName(`THE DAMN`);
+client.channels.get("546680636123906059").setName(`THE DAMNATION`);
+client.channels.get("546680636123906059").setName(`THE DAMNATION™`);
+	
+  }, 20000);
+});
+
 
 client.login(process.env.BOT_TOKEN);
