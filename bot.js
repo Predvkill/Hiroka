@@ -59,7 +59,8 @@ client.on('message', message => {
 
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
-  return sendMessage(`**💎 Welcome ${member} To 🔰 • ${member.guild.name} Server • 🔰 - Please Read Our [#server-rules☑] Before Do Something Else And Respect The Other Members Within The Community ! . Enjoy ♥ [ And You Are Number : "${member.guild.memberCount}" ] 💎**`)
+  const embed = new Discord.RichEmbed()
+  return channel.send(embed)(`**💎 Welcome ${member} To 🔰 • ${member.guild.name} Server • 🔰 - Please Read Our [#server-rules☑] Before Do Something Else And Respect The Other Members Within The Community ! . Enjoy ♥ [ And You Are Number : "${member.guild.memberCount}" ] 💎**`)
 
   }).catch(console.error)
 	
