@@ -59,8 +59,10 @@ client.on('message', message => {
 
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
-  return message.channel.send(`**💎 Welcome ${member} To 🔰 • ${member.guild.name} Server • 🔰 - Please Read Our [#server-rules☑] Before Do Something Else And Respect The Other Members Within The Community ! . Enjoy ♥ [ And You Are Number : "${member.guild.memberCount}" ] 💎**`)
-}).catch(console.error)
+  return TextChannel.send(`**💎 Welcome ${member} To 🔰 • ${member.guild.name} Server • 🔰 - Please Read Our [#server-rules☑] Before Do Something Else And Respect The Other Members Within The Community ! . Enjoy ♥ [ And You Are Number : "${member.guild.memberCount}" ] 💎**`)
+
+  }).catch(console.error)
+	
 })
 
 
