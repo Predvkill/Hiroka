@@ -452,30 +452,22 @@ client.on('message', msg => {
 });
 
 
-client.on('message', msg => {
-  if (msg.author.bot) return;
-  if (!msg.content.startsWith(prefix)) return;
-  let command = msg.content.split(" ")[0];
-  command = command.slice(prefix.length);
-  let args = msg.content.split(" ").slice(1);
+client.on('message', message => {
+    let args = message.content.split(" ").slice(1);
+    if (message.author.bot) return;
+    if (!message.channel.guild) return;
+    if (message.content.startsWith(prefix + 'clear')) {
 
-    if(command === "clear") {
-        const emoji = client.emojis.find("name", "founders-cmd⌨")
-    let textxt = args.slice(0).join("");
-    if(msg.member.hasPermission("MANAGE_MESSAGES")) {
-    if (textxt == "") {
-        msg.delete().then
-    msg.channel.send("***``ضع عدد الرسائل التي تريد مسحها 👌``***").then(m => m.delete(3000));
-} else {
-    msg.delete().then
-    msg.delete().then
-    msg.channel.bulkDelete(textxt);
-        msg.channel.send("``php\nعدد الرسائل التي تم مسحها: " + textxt + "\n``").then(m => m.delete(3000));
-        }    
+        if (isNaN(args[0])) return message.channel.send('**Please supply a valid amount of messages to purge**');
+        if (args[0] > 100) return message.channel.send('**Please supply a number less than 100**');
+
+        message.channel.bulkDelete(args[0])
+            .then(messages => message.channel.send(`**Successfully deleted \`${messages.size}/${args[0]}\` messages**`).then(msg => msg.delete({
+                timeout: 5000
+            })))
     }
-}
 });
-     
+    
 
 client.on("message", (message) => {
 if (message.content.startsWith("/ct")) {
