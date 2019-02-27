@@ -1,5 +1,6 @@
 // THIS BOT [JARVIS] CREATED BY THE RARER RARE RANGER - 2018 - 2019©
 // ==================================================================
+
 const Discord = require('discord.js');
 const fs = require('fs');
 const ms = require('ms');
@@ -90,6 +91,8 @@ message.channel.sendEmbed(embed)
 }
 });
 
+// ==================================================================
+
 function timeCon(time) {
     let days = Math.floor(time % 31536000 / 86400)
     let hours = Math.floor(time % 31536000 % 86400 / 3600)
@@ -101,7 +104,7 @@ function timeCon(time) {
     seconds = seconds > 9 ? seconds : '0' + seconds
     return `${days > 0 ? `${days}:` : ''}${(hours || days) > 0 ? `${hours}:` : ''}${minutes}:${seconds}`
 }
-var version = '1.9';
+var version = '2.0';
 client.on('message', message => {
     if (message.content.startsWith(prefix + "stats")) {
    if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('⚠ | **•# No Permissions**');
@@ -109,23 +112,28 @@ client.on('message', message => {
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
-            .setColor('RANDOM')
-            .setTitle('``JARVIS STATS`` ')
-            .addField('``Uptime``', [timeCon(process.uptime())], true)
-            .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
-            .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
-            .addField('``servers``', [client.guilds.size], true)
-            .addField('``channels``' , `[ ${client.channels.size} ]` , true)
-            .addField('``Users``' ,`[ ${client.users.size} ]` , true)
-            .addField('``My Name``' , `[ ${client.user.tag} ]` , true)
-            .addField('``My ID``' , `[ ${client.user.id} ]` , true)
-            .addField('``Node``' , `[${process.version} ]` , true)
-                  .addField('``My Prefix``' , `/` , true)
-                  .addField('``My Language``' , `[ Java Script ]` , true)
-                  .setFooter('By | TheRareRanger')
+            .setColor('859900')
+            .setTitle('**[JARVIS] STATS** ')
+	    .addField('``Bot Version :``' , `[ v2.0 ]` , true)
+            .addField('``👑 Bot Owner 👑 :``' , `[<@480540559233122324>]` , true)
+            .addField('``Bot Uptime :``', [timeCon(process.uptime())], true)
+            .addField('``Bot Ping :``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
+            .addField('``Bot RAM Usage :``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
+            .addField('``TG - Servers :``', [client.guilds.size], true)
+            .addField('``TG - Channels :``' , `[ ${client.channels.size} ]` , true)
+            .addField('``TG - Users :``' ,`[ ${client.users.size} ]` , true)
+            .addField('``Bot Name :``' , `[ ${client.user.tag} ]` , true)
+            .addField('``Bot ID :``' , `[ ${client.user.id} ]` , true)
+            .addField('``Bot Node :``' , `[${process.version} ]` , true)
+                  .addField('``Bot Prefix :``' , `/` , true)
+                  .addField('``Bot Language :``' , `[ Java Script ]` , true)
+                  .setFooter('❖══ ● 🔰 [ THE GRID™ - OFFICIAL ] 🔰 ● ══❖')
+	          .setTimestamp()
     })
 }
 });
+
+// ==================================================================
 
 client.on('message', message => {
 
@@ -169,7 +177,7 @@ client.on('message', message => {
     }
   });
 
-
+// ==================================================================
 
   const codes = {
     ' ': '   ',
@@ -228,6 +236,8 @@ client.on('message', message => {
 }
 });
 
+// ==================================================================
+
  client.on('message', message => {
 if(message.content.startsWith(prefix +'news')) {
    if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('⚠ | **•# No Permissions**').then(m => m.delete(5000));
@@ -279,6 +289,7 @@ msg.delete();
 }			     
 });                        
   
+// ==================================================================
 
 client.on('message', message => {
     if (message.channel.id == "529659667421462548") {
@@ -289,6 +300,7 @@ client.on('message', message => {
     }
 });
 
+// ==================================================================
 
 const seender = 'Brodcast + Sender -> {sender}.';
 const server = 'Brodcast + server -> {server}.';
@@ -343,6 +355,7 @@ client.on('message', message => {
  }
  });
 
+// ==================================================================
 
 //report
   client.on("message", message => {
@@ -356,14 +369,14 @@ client.on('message', message => {
         if (message.mentions.users.size < 1) return message.reply('**You must Montion The Member To Be Reported**').catch(console.error);
          
 
-    if (!modlog) return message.reply('**Report Room is Not available**');
+    if (!modlog) return message.reply('**Report Room is Not Available**');
     const embed = new Discord.RichEmbed()
-      .setColor(0x8600AE)
+      .setColor('dc322f')
       .setTimestamp()
-      .addField('🔰• Message Type :', '⛔ Report ⛔')
-      .addField('🔰• Member Reported :', `${user.username}#${user.discriminator} (${user.id}`)
-      .addField('🔰• Report owner :', `${message.author.username}#${message.author.discriminator}`)
-      .addField('🔰• Reason :', reason);
+      .addField('🔰 • Message Type :', '⛔ Report ⛔')
+      .addField('🔰 • Member Reported :', `${user.username}#${user.discriminator} (${user.id}`)
+      .addField('🔰 • Report Owner :', `${message.author.username}#${message.author.discriminator}`)
+      .addField('🔰 • Reason :', reason);
       message.delete()
       return client.channels.get(modlog.id).sendEmbed(embed).catch(console.error);
       
@@ -417,8 +430,8 @@ client.on('guildMemberAdd', member => {
   let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setThumbnail(memberavatar)
-      .addField('• 🔰| Name » ',`${member}`)
-      .addField('• 🌹| Welcome User » ' , `💎・。・゜★・。・。☆・゜・。・゜。・。・゜★・💎 
+      .addField('• 🔰| User Name » ',`${member}`)
+      .addField('• 👥| Welcome User » ' , `💎・。・゜★・。・。☆・゜・。・゜。・。・゜★・💎 
 Welcome ${member} To **The DamNation™ - Official  Server** , Please Be Sure To Take A Look At The Rules In **#server-rules☑**  Additional Details Can Be Found In **#announcements✍** . Our Support Team Is Here And Happy To Help You If You Have Any Questions Regarding **TheDamNation™**, Enjoy Your Stay ♥.
 💎・。・゜★・。・。☆・゜・。・゜。・。・゜★・💎`)
       .addField('• 🆔| User ID » ', "**[" + `${member.id}` + "]**" )
@@ -427,7 +440,7 @@ Welcome ${member} To **The DamNation™ - Official  Server** , Please Be Sure To
   .addField('• 🕣| Time Create » ', member.user.createdAt.toLocaleString(), true)
 
                                      
-   .setFooter("|•♥•| The DamNation™ |•♥•|")
+   .setFooter("❖══ ● 🔰 [ THE GRID™ - OFFICIAL ] 🔰 ● ══❖")
       .setTimestamp()
  
     channel.sendEmbed(embed);
