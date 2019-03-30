@@ -513,6 +513,8 @@ client.on('message', message => {
     if (message.channel.id == "529659667421462548") {
         message.react("👍");
         message.react("👎");
+	    
+         }
    });
 
 
