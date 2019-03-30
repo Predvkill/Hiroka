@@ -84,7 +84,8 @@ It Must Be Your Lucky Day ! ● ** `)
 // ================================================================
 
 client.on('ready', function(){
-client.channels.get("552138170012008469").send("/JARVIS IS BACK ONLINE NOW").then(m => m.delete(500));
+	
+client.channels.get("529660118934224896").send("/JARVIS IS BACK ONLINE NOW").then(m => m.delete(500));
 		   
  });
 
