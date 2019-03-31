@@ -689,14 +689,14 @@ client.on('guildMemberAdd', member => {
       .setColor('RANDOM')
       .setAuthor(member.guild.name, member.guild.iconURL)
       .setThumbnail(memberavatar)
-      .addField('• 🔰| User Name » ',`${member}`)
-      .addField('• 👥| Welcome User » ' , `💎・。・゜★・。・。☆・゜・。・゜。・。・゜★・💎 
-Welcome ${member} To **The TDN™ - Official**  Server , Please Be Sure To take a look At The Rules in **#server-rules☑** Additional Details Can Be Found In **#announcements** . Our Support Team Is Here And Happy To Help You If You Have Any **Questions Regarding The TDN™**, Enjoy Your Stay ♥.
+      .addField('• 🔰 | User Name » ',`${member}`)
+      .addField('• 👥 | Welcome User » ' , `💎・。・゜★・。・。☆・゜・。・゜。・。・゜★・💎 
+Welcome ${member} To **THE DAMNATION™ - OFFICIAL**  Server , Please Be Sure To take a look At The Rules in **#server-rules☑** Additional Details Can Be Found In **#announcements** . Our Support Team Is Here And Happy To Help You If You Have Any **Questions Regarding The TDN™**, Enjoy Your Stay ♥.
 💎・。・゜★・。・。☆・゜・。・゜。・。・゜★・💎`)
-      .addField('• 🆔| User ID » ', "**[" + `${member.id}` + "]**" )
-              .addField('• ➡| You Are Number » ', "**[" + `${member.guild.memberCount}` + "]**")                     
-                                   .addField('• 🔮| Server Name » ', `${member.guild.name}`,true)
-  .addField('• 🕣| Time Create » ', member.user.createdAt.toLocaleString(), true)
+      .addField('• 🆔 | User ID » ', "**[" + `${member.id}` + "]**" )
+              .addField('• ➡ | You Are Number » ', "**[" + `${member.guild.memberCount}` + "]**")                     
+                                   .addField('• 🔮 | Server Name » ', `**${member.guild.name}**` ,true)
+  .addField('• 🕣 | Time Create » ', **member.user.createdAt.toLocaleString()**, true)
 
                                      
    .setFooter("❖══ ● 🔰 [ THE TDN™ - OFFICIAL ] 🔰 ● ══❖")
