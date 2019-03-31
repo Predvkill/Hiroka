@@ -696,7 +696,7 @@ Welcome ${member} To **THE DAMNATION™ - OFFICIAL**  Server , Please Be Sure To
       .addField('• 🆔 | User ID » ', "**[" + `${member.id}` + "]**" )
               .addField('• ➡ | You Are Number » ', "**[" + `${member.guild.memberCount}` + "]**")                     
                                    .addField('• 🔮 | Server Name » ', `**${member.guild.name}**` ,true)
-  .addField('• 🕣 | Time Create » ', **member.user.createdAt.toLocaleString()**, true)
+  .addField('• 🕣 | Time Create » ', member.user.createdAt.toLocaleString(), true)
 
                                      
    .setFooter("❖══ ● 🔰 [ THE TDN™ - OFFICIAL ] 🔰 ● ══❖")
