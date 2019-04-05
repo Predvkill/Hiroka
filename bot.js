@@ -5,24 +5,6 @@
 
 // ==================================================================
 
-////////////////// [ 🔰 CONSOL JARVIS LOGS 🔰 ] //////////////////
-
-client.on('warn', console.warn);
-
-client.on('error', console.error);
-
-client.on('disconnect', () => console.log('🔰 I Just Disconnected, Making Sure You Know, I Will Reconnect Now... 🔰'));
-
-client.on('reconnecting', () => console.log('🔰 I Am Reconnecting Now ! 🔰'));
-
-client.on('ready', function() {
-
-    console.log(`🔰 [ ${client.user.username} ] : IS READY TO FIGHT NOW 🔰`);
-
-});
-
-// ==================================================================
-
 const Discord = require('discord.js');
 const fs = require('fs');
 const ms = require('ms');
@@ -52,6 +34,24 @@ ti={}
 spee={};
 
 // ================================================================
+
+////////////////// [ 🔰 CONSOL JARVIS LOGS 🔰 ] //////////////////
+
+client.on('warn', console.warn);
+
+client.on('error', console.error);
+
+client.on('disconnect', () => console.log('🔰 I Just Disconnected, Making Sure You Know, I Will Reconnect Now... 🔰'));
+
+client.on('reconnecting', () => console.log('🔰 I Am Reconnecting Now ! 🔰'));
+
+client.on('ready', function() {
+
+    console.log(`🔰 [ ${client.user.username} ] : IS READY TO FIGHT NOW 🔰`);
+
+});
+
+// ==================================================================
 
 function timeCon(time) {
     let days = Math.floor(time % 31536000 / 86400)
