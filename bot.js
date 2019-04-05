@@ -69,7 +69,7 @@ client.on('message', message => {
             .addField('``Bot Name :``' , `[ ${client.user.tag} ]`, true)
             .addField('``Bot ID :``' , `[ ${client.user.id} ]` , true)
             .addField('``Bot Node :``' , `[ ${process.version} ]` , true)
-                  .addField('``Bot Prefix :``' , `👑 [ / ] 👑` , true)
+                  .addField('``Bot Prefix :``' , `👑 [ FOR ADMINS ] 👑` , true)
                   .addField('``Bot Language :``' , `[ Java Script ]` , true)
                   .setFooter('● 🔰 [ THE TDN™ - OFFICIAL - 2019© ] 🔰 ●')
 	          .setTimestamp()
