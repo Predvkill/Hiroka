@@ -633,7 +633,7 @@ client.on("message", message => {
 
         let user = message.mentions.users.first();
         let reason = args.slice(1).join(' ');
-        let modlog = client.channels.find(x => x.name === 'feedback');
+        let modlog = client.channels.find(x => x.name === '❤feedback❤');
         if (!reason) return message.reply('**:x: You Must Montion Yourself and Type Your Message To feedback :x:**').then(m => m.delete(60000));
         if (message.mentions.users.size < 1) return message.reply('**:x: You Must Montion Yourself To feedback :x:**').catch(console.error);
    
