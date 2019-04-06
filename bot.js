@@ -1330,7 +1330,7 @@ client.on('message', message => {
 // ==================================================================
 
     client.on('voiceStateUpdate', (old, now) => {
-    const channel = client.channels.get('530640160166117386');
+    const channel = client.channels.get('564162432839188503');
     const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
     const size = channel.name.match(/\[\s(\d+)\s\]/);
     if (!size) return channel.setName(`Voice Online : 「${currentSize}」`);
