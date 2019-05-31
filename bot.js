@@ -3,30 +3,9 @@
  // THIS BOT [JARVIS] CREATED BY [THE RARE RANGER] - 2019© //
 ////////////// 🔰 THE DAMNATION™ & THE GRID™ 🔰 //////////////
 
-// ==================================================================
-
-const Discord = require('discord.js');
-const fs = require('fs');
-const ms = require('ms');
-const canvas = require('canvas-prebuilt');
-const jimp = require('jimp');
-const ytdl = require('ytdl-core');
-const request = require('request');
-const dateFormat = require('dateformat');
-const google = require('google-it');
-const db = require('quick.db');
-const giphy = require('giphy-api')();    
-const googl = require('goo.gl');  
-const translate = require('google-translate-api');   
-const { Client, Util } = require('discord.js');  
-const UserBlocked = new Set(); 
-const moment = require('moment');
-const pretty = require('pretty-ms'); 
-const zalgo = require('zalgolize');   
-const math = require('math-expression-evaluator'); 
-const stripIndents = require('common-tags').stripIndents;
-const figlet = require('figlet');
-const client = new Discord.Client();
+// ==================================================================   
+const Discord = require('discord.js')
+const client = new Discord.Client()
 const prefix = '/'
 let cooldown = new Set();
 let cdseconds = 5;
